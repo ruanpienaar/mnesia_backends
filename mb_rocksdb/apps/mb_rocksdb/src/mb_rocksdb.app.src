@@ -1,0 +1,16 @@
+{application, mb_rocksdb,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  mnesia,
+                  sext,
+                  rocksdb,
+                  mnesia_rocksdb
+                 ]},
+  {mod, { mb_rocksdb_app, []}},
+  {env, []}
+ ]}.

@@ -8,3 +8,6 @@ ebin/*.beam
 rel/example_project
 .concrete/DEV_MODE
 .rebar
+mb_rocksdb/_build/
+mb_rocksdb/rebar.lock
+mb_rocksdb/rebar3
