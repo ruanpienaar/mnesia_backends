@@ -1,4 +1,4 @@
--module(mb_rdb_example_table).
+-module(mb_eldb_example_table).
 
 -record(?MODULE, {
     key,
@@ -27,7 +27,7 @@
 create_table(Nodes) ->
     Opts = [
         % {disc_copies, Nodes},
-        {rocksdb_copies, Nodes},
+        {leveldb_copies, Nodes},
         {type, ordered_set},
         {attributes, columns()}
     ],

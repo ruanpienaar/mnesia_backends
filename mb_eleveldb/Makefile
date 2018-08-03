@@ -2,6 +2,7 @@
 
 release: compile
 	@./rebar3 release
+	@cd ./_build/default/lib/eleveldb && make # elveldb uses rebar(2) ........
 
 compile: rebar3 get-deps
 	@./rebar3 compile
@@ -20,3 +21,6 @@ dialyzer: compile
 
 rebar3:
 	@ls rebar3 || wget https://s3.amazonaws.com/rebar3/rebar3 && chmod +x rebar3
+	
+console: release
+	@./_build/default/rel/mb_eleveldb/bin/mb_eleveldb console

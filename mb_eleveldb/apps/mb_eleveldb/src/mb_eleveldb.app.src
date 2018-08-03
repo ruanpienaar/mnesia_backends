@@ -5,7 +5,10 @@
   {registered, []},
   {applications, [
                   kernel,
-                  stdlib
+                  stdlib,
+                  mnesia,
+                  mnesia_cluster_lib,
+                  eleveldb
                  ]},
   {mod, { mb_eleveldb_app, []}},
   {env, []}

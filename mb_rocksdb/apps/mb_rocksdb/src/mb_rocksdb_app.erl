@@ -12,12 +12,6 @@
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
-
-    % mnesia_rocksdb init
-    ok = mnesia:start(),
-    {ok,rocksdb_copies} = mnesia_rocksdb:register(),
-
-
     ok = mnesia_cluster_lib:start(),
     mb_rocksdb_sup:start_link().
 
